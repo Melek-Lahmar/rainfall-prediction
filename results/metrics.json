@@ -1,0 +1,139 @@
+{
+  "audit": {
+    "raw_rows": 145460,
+    "raw_columns": 23,
+    "raw_missing_cells": 343248,
+    "raw_duplicates": 0,
+    "complete_rows": 56420,
+    "model_rows": 7557,
+    "model_columns": 23,
+    "locations": [
+      "Melbourne",
+      "MelbourneAirport",
+      "Watsonia"
+    ],
+    "target_counts": {
+      "No": 5766,
+      "Yes": 1791
+    },
+    "rain_rate": 0.2369988090512108
+  },
+  "split": {
+    "train_rows": 6045,
+    "test_rows": 1512,
+    "random_state": 42
+  },
+  "models": [
+    {
+      "Model": "Majority-class baseline",
+      "Accuracy": 0.7632275132275133,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1": 0.0,
+      "ROC-AUC": 0.5
+    },
+    {
+      "Model": "Logistic Regression (baseline)",
+      "Accuracy": 0.8306878306878307,
+      "Precision": 0.6917293233082706,
+      "Recall": 0.5139664804469274,
+      "F1": 0.5897435897435898,
+      "ROC-AUC": 0.8511444284151313
+    },
+    {
+      "Model": "Random Forest (baseline)",
+      "Accuracy": 0.8485449735449735,
+      "Precision": 0.763265306122449,
+      "Recall": 0.5223463687150838,
+      "F1": 0.6202321724709784,
+      "ROC-AUC": 0.8887740480040278
+    },
+    {
+      "Model": "Logistic Regression (tuned)",
+      "Accuracy": 0.7751322751322751,
+      "Precision": 0.5174418604651163,
+      "Recall": 0.7458100558659218,
+      "F1": 0.6109839816933639,
+      "ROC-AUC": 0.8512097828297008
+    },
+    {
+      "Model": "Random Forest (tuned)",
+      "Accuracy": 0.8412698412698413,
+      "Precision": 0.7521367521367521,
+      "Recall": 0.49162011173184356,
+      "F1": 0.5945945945945946,
+      "ROC-AUC": 0.885358674709294
+    }
+  ],
+  "grid_search": {
+    "scoring": "roc_auc",
+    "cv_folds": 5,
+    "logistic_best_params": {
+      "classifier__C": 0.1,
+      "classifier__class_weight": "balanced",
+      "classifier__l1_ratio": 0.0
+    },
+    "logistic_best_cv_score": 0.8715121760361875,
+    "forest_best_params": {
+      "classifier__class_weight": "balanced_subsample",
+      "classifier__max_depth": null,
+      "classifier__min_samples_split": 2,
+      "classifier__n_estimators": 150
+    },
+    "forest_best_cv_score": 0.8968530679094039
+  },
+  "final_model": "Random Forest (tuned)",
+  "final_metrics": {
+    "Accuracy": 0.8412698412698413,
+    "Precision": 0.7521367521367521,
+    "Recall": 0.49162011173184356,
+    "F1": 0.5945945945945946,
+    "ROC-AUC": 0.885358674709294
+  },
+  "confusion_matrix": [
+    [
+      1096,
+      58
+    ],
+    [
+      182,
+      176
+    ]
+  ],
+  "classification_report": {
+    "No": {
+      "precision": 0.8575899843505478,
+      "recall": 0.949740034662045,
+      "f1-score": 0.9013157894736842,
+      "support": 1154.0
+    },
+    "Yes": {
+      "precision": 0.7521367521367521,
+      "recall": 0.49162011173184356,
+      "f1-score": 0.5945945945945946,
+      "support": 358.0
+    },
+    "accuracy": 0.8412698412698413,
+    "macro avg": {
+      "precision": 0.8048633682436499,
+      "recall": 0.7206800731969443,
+      "f1-score": 0.7479551920341394,
+      "support": 1512.0
+    },
+    "weighted avg": {
+      "precision": 0.832621560321091,
+      "recall": 0.8412698412698413,
+      "f1-score": 0.8286926494163335,
+      "support": 1512.0
+    }
+  },
+  "example_prediction": {
+    "test_index": "66788",
+    "true_class": "No",
+    "predicted_class": "No",
+    "rain_probability": 0.34
+  },
+  "model_reload_verified": true,
+  "source_notebook_sha256": "dc9fb20e82585785b3fc9aecf0a4f43c2a8857643d9d3f25450a6be2d99c2373",
+  "preserved_notebook_sha256": "dc9fb20e82585785b3fc9aecf0a4f43c2a8857643d9d3f25450a6be2d99c2373"
+}
