@@ -852,6 +852,8 @@ def write_text_files(payload: dict) -> None:
 
 An end-to-end binary classification project that predicts rainfall for the Melbourne area from historical Australian weather observations. The repository contains an executed notebook, leakage-aware preprocessing pipelines, cross-validated model tuning, reproducible figures, and a serialized final pipeline.
 
+Repository: [Melek-Lahmar/australian-rainfall-prediction](https://github.com/Melek-Lahmar/australian-rainfall-prediction)
+
 ## Project Context
 
 The project originated from IBM's *Machine Learning with Python* coursework on Coursera and was independently enhanced into a portfolio project. IBM does not endorse this enhanced repository.
@@ -1043,7 +1045,7 @@ The biggest lesson was that a strong classification project is not just about ac
 
 Technologies: Python, Pandas, NumPy, Matplotlib, scikit-learn, Jupyter, and joblib.
 
-GitHub: [add repository URL]
+GitHub: https://github.com/Melek-Lahmar/australian-rainfall-prediction
 
 #MachineLearning #Python #DataScience #ScikitLearn #IBM #ArtificialIntelligence
 

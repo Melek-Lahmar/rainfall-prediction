@@ -4,6 +4,8 @@
 
 An end-to-end binary classification project that predicts rainfall for the Melbourne area from historical Australian weather observations. The repository contains an executed notebook, leakage-aware preprocessing pipelines, cross-validated model tuning, reproducible figures, and a serialized final pipeline.
 
+Repository: [Melek-Lahmar/australian-rainfall-prediction](https://github.com/Melek-Lahmar/australian-rainfall-prediction)
+
 ## Project Context
 
 The project originated from IBM's *Machine Learning with Python* coursework on Coursera and was independently enhanced into a portfolio project. IBM does not endorse this enhanced repository.

@@ -19,7 +19,7 @@ The biggest lesson was that a strong classification project is not just about ac
 
 Technologies: Python, Pandas, NumPy, Matplotlib, scikit-learn, Jupyter, and joblib.
 
-GitHub: [add repository URL]
+GitHub: https://github.com/Melek-Lahmar/australian-rainfall-prediction
 
 #MachineLearning #Python #DataScience #ScikitLearn #IBM #ArtificialIntelligence
 
