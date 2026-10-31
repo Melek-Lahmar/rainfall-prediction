@@ -19,9 +19,12 @@
     "rain_rate": 0.2369988090512108
   },
   "split": {
+    "design": "random_stratified_holdout",
     "train_rows": 6045,
     "test_rows": 1512,
-    "random_state": 42
+    "test_size": 0.2,
+    "random_state": 42,
+    "chronological": false
   },
   "models": [
     {
@@ -68,6 +71,7 @@
   "grid_search": {
     "scoring": "roc_auc",
     "cv_folds": 5,
+    "cv_strategy": "StratifiedKFold(shuffle=True, random_state=42)",
     "logistic_best_params": {
       "classifier__C": 0.1,
       "classifier__class_weight": "balanced",
