@@ -174,7 +174,9 @@ The experiments should be compared only within their documented context:
 
 ### Australia extension
 
-1. Open [rainfall_prediction.ipynb](rainfall_prediction.ipynb) in Colab.
+[![Open the Australia extension in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Melek-Lahmar/rainfall-prediction/blob/main/rainfall_prediction.ipynb)
+
+1. Open the [Australia extension directly in Google Colab](https://colab.research.google.com/github/Melek-Lahmar/rainfall-prediction/blob/main/rainfall_prediction.ipynb).
 2. Upload `weatherAUS_2.csv` to the Colab working directory.
 3. Choose **Runtime → Run all**.
 
@@ -182,15 +184,22 @@ The Australian CSV is not committed. Obtain it from the course material or the c
 
 ### Tunisia and Italy
 
-1. Open [notebooks/tunisia_italy_rainfall_experiments.ipynb](notebooks/tunisia_italy_rainfall_experiments.ipynb) in Colab.
+[![Open the Tunisia and Italy experiment in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Melek-Lahmar/rainfall-prediction/blob/main/notebooks/tunisia_italy_rainfall_experiments.ipynb)
+
+1. Open the [Tunisia and Italy notebook directly in Google Colab](https://colab.research.google.com/github/Melek-Lahmar/rainfall-prediction/blob/main/notebooks/tunisia_italy_rainfall_experiments.ipynb).
 2. Keep the default `SELECTED_CITIES` values (`Sfax` and `Rome`) for the documented experiments.
 3. Choose **Runtime → Run all**.
-4. Download the generated dataset ZIP and `weather_cache_partial.zip` if the API stops with HTTP 429.
-5. To resume in a new session, upload `weather_cache_partial.zip` before rerunning the notebook.
+4. If Open-Meteo returns HTTP 429, preserve `weather_cache_partial.zip`. The notebook creates it and attempts a browser download; if that download does not start, download the file from Colab's **Files** panel before ending the session. The final dataset ZIP is not created until all requested years finish successfully.
+5. After the service limit has recovered, start a new Colab session, upload the archive with the exact name `weather_cache_partial.zip` into `/content`, and then choose **Runtime → Run all**. The notebook automatically restores completed yearly `.json.gz` files and requests only missing city-years.
+6. After a successful complete run, download `Tunisie_Italie_2_Datasets_Meteo.zip`.
 
 Do not repeatedly restart the notebook after a 429 response. Wait for the service limit to recover and resume from the cache.
 
-The valid completed course copy is [FinalProject_AUSWeather_completed.ipynb](FinalProject_AUSWeather_completed.ipynb). The byte-for-byte archival source is preserved at [original/FinalProject_AUSWeather_original.ipynb](original/FinalProject_AUSWeather_original.ipynb); it retains legacy notebook metadata from the course distribution.
+### IBM/Coursera completed course copy
+
+[![Open the completed course notebook in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Melek-Lahmar/rainfall-prediction/blob/main/FinalProject_AUSWeather_completed.ipynb)
+
+The valid completed course copy is available [directly in Google Colab](https://colab.research.google.com/github/Melek-Lahmar/rainfall-prediction/blob/main/FinalProject_AUSWeather_completed.ipynb). The byte-for-byte archival source is preserved at [original/FinalProject_AUSWeather_original.ipynb](original/FinalProject_AUSWeather_original.ipynb); it retains legacy notebook metadata from the course distribution.
 
 ## Optional local execution
 
@@ -249,7 +258,9 @@ Network access is required for Open-Meteo. Generated datasets, caches, and ZIP f
 │   ├── metrics.json
 │   ├── model_comparison.csv
 │   └── tunisia_italy_screenshot_metrics.csv
-└── scripts/build_australia_experiment.py
+└── scripts/
+    ├── build_australia_experiment.py
+    └── validate_repository.py
 ```
 
 ## Project limitations
