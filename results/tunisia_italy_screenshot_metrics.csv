@@ -1,0 +1,5 @@
+Country,Location,Model,Accuracy,Precision,Recall,F1,ROC-AUC,Evidence
+Tunisia,Sfax,Logistic Regression,0.922,0.692,0.145,0.240,0.802,assets/screenshots/sfax-rome-model-results.png
+Tunisia,Sfax,Random Forest,0.925,0.818,0.145,0.247,0.807,assets/screenshots/sfax-rome-model-results.png
+Italy,Rome,Logistic Regression,0.755,0.622,0.428,0.507,0.794,assets/screenshots/sfax-rome-model-results.png
+Italy,Rome,Random Forest,0.775,0.673,0.460,0.547,0.798,assets/screenshots/sfax-rome-model-results.png
